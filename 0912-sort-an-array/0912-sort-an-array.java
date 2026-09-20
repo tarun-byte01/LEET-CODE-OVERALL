@@ -5,6 +5,7 @@ class Solution {
     }
 
     void mergeSort(int[] nums, int left, int right) {
+
         if (left >= right) {
             return;
         }
@@ -18,6 +19,7 @@ class Solution {
     }
 
     void merge(int[] nums, int left, int mid, int right) {
+
         int[] temp = new int[right - left + 1];
 
         int i = left;
@@ -25,6 +27,7 @@ class Solution {
         int k = 0;
 
         while (i <= mid && j <= right) {
+
             if (nums[i] <= nums[j]) {
                 temp[k] = nums[i];
                 i++;
@@ -32,6 +35,7 @@ class Solution {
                 temp[k] = nums[j];
                 j++;
             }
+
             k++;
         }
 
